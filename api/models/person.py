@@ -1,5 +1,3 @@
-from api.db.db_config import get_db_connection, DBError
-
 class Person():
     schema = {
         "name": str,
@@ -41,13 +39,4 @@ class Person():
     
     @classmethod   
     def get_person_by_id(cls, id):
-        conn = get_db_connection()
-        cursor = conn.cursor()
-        cursor.execute('SELECT * FROM people WHERE id = {0}'.format(id))
-        data = cursor.fetchall()
-        cursor.close()
-        conn.close()
-        
-        if cursor.rowcount > 0:
-            return Person(data[0]).to_json()
-        raise DBError("No existe el recurso solicitado")
+        return {"columna1":"valor1"}

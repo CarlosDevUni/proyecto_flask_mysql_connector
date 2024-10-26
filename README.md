@@ -73,9 +73,7 @@ source .venv/bin/activate
 Las dependencias necesarias se encuentran en el archivo `requirements.txt` dentro de la carpeta settings:
 
 ```bash
-cd settings
-pip install -r requirements.txt
-cd..
+pip install -r .\settings\requirements.txt
 ```
 
 
@@ -122,6 +120,8 @@ DB_PORT=3306
 DB_USER=flask_user_name
 DB_PASSWORD=flask_user_password
 DB_NAME=flask_app_db
+PORT=5000
+HOST=localhost
 ```
 
 La configuración en este archivo debe coincidir con la utilizada para crear la base de datos y el usuario. Los valores del ejemplo son los mismos que se definen en los scripts de inicialización en SQL. Cuando el proyecto se despliegue en un servicio en la nube, se definirán valores específicos para esta configuración y el proyecto ya queda preparado para actualizar dichos valores.

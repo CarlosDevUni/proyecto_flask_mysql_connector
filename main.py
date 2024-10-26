@@ -1,8 +1,10 @@
 from api import app
 import os
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+# Para desarrollo:
+if __name__ == '__main__':
+    app.run(debug=True, host=os.environ.get("HOST", "localhost"), port=int(os.environ.get("PORT", 5000)))
 
-# if __name__ == '__main__':
-#     app.run(debug=True, port=5000)
+# Para producción:
+# if __name__ == "__main__":
+#     app.run(host=os.environ.get("HOST", "0.0.0.0"), port=int(os.environ.get("PORT", 5000)))

@@ -8,5 +8,4 @@ def get_person_by_id(id):
         person = Person.get_person_by_id(id)
         return jsonify( person ), 200
     except Exception as e:
-        print(e)
         return jsonify( {"message": e.args[0]} ), 400
