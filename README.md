@@ -16,7 +16,7 @@ Se requieren los siguientes programas para la ejecución del proyecto:
 Abrir una terminal y ejecutar el comando:
 
 ```bash
-git clone https://github.com/CarlosDevUni/proyecto_flask_mysql
+git clone https://github.com/CarlosDevUni/proyecto_flask_mysql_connector
 ```
 
 ### 2. Navegar al directorio del proyecto
