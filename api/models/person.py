@@ -76,7 +76,7 @@ class Person():
         raise DBError("No existe el recurso solicitado")
     
     @classmethod
-    def create_person(cls, data):
+    def create_person(cls,data):
         if not cls.validate(data):
             raise DBError("Campos/valores inválidos")
         
